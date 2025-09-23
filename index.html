@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="light.css" id="tema">
     <title>Tags de Formulário</title>
 </head>
 <body>
     <section class="principal">
         <form action="#" class="formulario">
+            
+            <div class="formularioitens">
+                <div class="areamodoescro">
+                <button class="botaomodoescuro" id="modo" onclick="modoEscuro()">Modo Escuro</button>
+            </div>
             <input type="text" placeholder="Nome" name="nome">
             <input type="text" placeholder="Endereço" name="endereco">
             <div class="form-grupo-cpf-data">
-                <input type="text" placeholder="CPF" name="cpf" class="cpf" maxlength="11">
+                <input type="text" placeholder="CPF" name="cpf" class="cpf" required maxlength="11">
                 <input type="date" name="data_nascimento" class="data_nascimento">
             </div>
+            <select name="selecao" id="selecao" class="selecao">
+                <option value="" selected disabled>Selecione o tipo de usuário...</option>
+                <option value="adm">Administrador</option>
+                <option value="master">Funcionário</option>
+                <option value="funcionario">Master</option>
+            </select>
             <div class="formgruporadio">
             <input type="radio" name="opcao">
             <p class="formgruporadiotexto">Opção 1</p></div>
@@ -26,9 +37,9 @@
             <input type="checkbox" name="termos-2">
             <p class="formgroupcheckboxtexto">Receber emails com novidades!</p>
         </div>
-        <input type="submit" class="botaoenviar" value="Enviar">
-            
+        <input type="submit" class="botaoenviar" value="Enviar"></div>
         </form>
     </section>
+    <script src="main.js"></script>
 </body>
 </html>

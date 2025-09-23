@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manjari:wght@100;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    outline: 0px solid red;
+    font-family: IBM Plex Sans Condensed;
+}
+
+body{
+    background: linear-gradient(180deg,rgb(61, 67, 97) 25%, rgb(16, 20, 48) 50%);
+}
+.principal{
+    width: 100%;
+    height: 100vh;   
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    border-radius: 10px 10px;
+    gap: 3%;
+    background: linear-gradient(180deg,#41474670, #11131870);
+    box-shadow: 2px 2px 10px;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formularioitens{
+    display: flex;
+    flex-direction: column;
+    padding-block: 4%;
+    justify-content: space-between;
+    align-self: center;
+    width: 75%;
+    height: 70dvh;
+}
+.form-grupo-cpf-data{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: center;
+}
+.cpf, .data_nascimento{
+    width: 50%;
+}
+input[type='text']{
+    height: 3vh;
+    padding: 2%;
+    border: 1px solid #ffffff;
+    background-color: rgb(24, 25, 30);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+input[type="text"]:focus, select:focus, input[type="date"]:focus{
+    box-shadow: orange 0px 0px 10px 2px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input[type="date"]{
+    height: 3vh;
+    padding: 2%;
+    border: 1px solid #ffffff;
+    background-color: rgb(24, 25, 30);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+select{
+    height: 7.5vh;
+    padding: 2%;
+    border: 1px solid #ffffff;
+    background-color: rgb(24, 25, 30);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.selecao{
+    align-self: center;
+}
+
+.formgruporadio, .formgrupocheckbox{
+    display: flex;
+    flex-direction: row;
+    gap:1%;
+    color: white;
+}
+
+.botaoenviar{
+    width: 25%;
+    align-self: center;
+    padding: 3%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(8, 95, 37);
+    background: linear-gradient(180deg,#c4f0a3 0%, #1dad37 17%, #1ca435 49%, #065c2d 100%);
+    font-weight: bolder;
+    color: white;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}  
+
+.botaoenviar:hover{
+    transform: scale(1.02);
+    background: linear-gradient(180deg,#ebfedc 0%, #5fc471 17%, #3cc154 49%, #219454 100%);
+    box-shadow: rgb(123, 255, 0) 0px 0px 10px 2px;
+}
+
+.botaomodoescuro{
+    background: linear-gradient(180deg,rgb(226, 238, 238) 0%, rgb(190, 199, 204) 17%, rgb(158, 172, 190) 83%, rgb(107, 123, 158) 100%);
+    padding-block: 2%;
+    color: rgb(0, 0, 0);
+    font-size: 11px;
+    border: 1px solid rgb(52, 73, 137);
+    border-radius: 5px;
+    width: 25%;
+    transition: all 0.1s ease-in-out;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.botaomodoescuro:hover{
+    transform: scale(1.02);
+    box-shadow: rgb(138, 199, 255) 0px 0px 10px 2px;
+    background: linear-gradient(180deg,rgb(243, 246, 246) 0%, rgb(230, 233, 235) 17%, rgb(202, 212, 226) 83%, rgb(164, 176, 203) 100%);
+}
+
+@media screen and (max-width: 415px){
+    .formulario{
+        width: 90%;
+        height: 80dvh;
+        margin-top: 5%;
+        gap: 7%
+    }
+
+    .form-grupo-cpf-data{
+        flex-direction: column;
+        gap: 10%;
+    }
+
+    .cpf, .data_nascimento{
+        width: 95%
+    }
+
+select{
+    width: 100%;
+}
+
+    .data_nascimento{
+        margin-top: 10%;
+        height: 5vh;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+    }
+
+    .botaoenviar{
+        padding: 10%;
+        width: 80%;
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 15pt;
+    }
+}
